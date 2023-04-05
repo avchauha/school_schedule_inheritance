@@ -1,5 +1,6 @@
 from school_schedule.student import Student
-from school_schedule.high_school_student import HighSchoolStudent
+# from school_schedule.high_school_student import HighSchoolStudent
+from school_schedule.middle_school_student import MiddleSchoolStudent
 
 # first instance
 quinn = Student(
@@ -18,21 +19,16 @@ quinn = Student(
 quinn.add_class("Painting")
 
 # second instance
-claire = HighSchoolStudent(
-                "Claire", 
-                "freshmen", 
-                [
-                    "Algebra", 
-                    "Writing", 
-                    "Contemporary Issues", 
-                    "Gym", 
-                    "Earth Science", 
-                    "Painting"
-                ],
-                has_parking_privileges=True,
-                clubs=["Algorithms Club"]
+ellis = MiddleSchoolStudent(
+                "Ellis", 
+                "junior", 
+                ["Painting"],
+                gets_transportation=True,
+                # clubs=["Algorithms Club"]
             )
 
-students = [quinn, claire]
+
+
+students = [quinn, ellis]
 for student in students:
     print(student.summary())
